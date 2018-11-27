@@ -1,8 +1,9 @@
-import * as THREE from 'three';
-// const THREE = require('three-js')([
-//   'EffectComposer',
-//   'OrbitControls'
-// ]);
+// import * as THREE from 'three';
+const THREE = require('three-js')([
+  'EffectComposer',
+  'OrbitControls'
+]);
+// var THREE = require("three-js")();
 
 window.addEventListener('DOMContentLoaded', () => {
   // レンダラーを作成
@@ -19,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const camera = new THREE.PerspectiveCamera(45, 800 / 600, 1, 10000);
   camera.position.set(0, 0, 1000);
   // カメラコントローラーを作成
-  // const controls = new THREE.OrbitControls(camera);
+  const controls = new THREE.OrbitControls(camera);
 
   // camera.lookAt(new THREE.Vector3(0, 0, 0));
 
