@@ -13,4 +13,6 @@ npm i -S three @types/three
 
 使い方
 cd threejs
-npm run build
+npm run build --watch
+or
+npm run build -w
