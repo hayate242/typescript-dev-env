@@ -801,14 +801,27 @@ eval("/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals 
 
 /***/ }),
 
+/***/ "./src/typescript/hello.ts":
+/*!*********************************!*\
+  !*** ./src/typescript/hello.ts ***!
+  \*********************************/
+/*! exports provided: Hello */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Hello\", function() { return Hello; });\nvar Hello = /** @class */ (function () {\n    function Hello(name) {\n        this.name = name;\n    }\n    Hello.prototype.disp = function () { console.log(\"Hello, \" + this.name + \".\"); };\n    return Hello;\n}());\n\n\n\n//# sourceURL=webpack:///./src/typescript/hello.ts?");
+
+/***/ }),
+
 /***/ "./src/typescript/main.ts":
 /*!********************************!*\
   !*** ./src/typescript/main.ts ***!
   \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// import * as THREE from 'three';\nvar THREE = __webpack_require__(/*! three-js */ \"./node_modules/three-js/index.js\")([\n    'EffectComposer',\n    'OrbitControls'\n]);\n// var THREE = require(\"three-js\")();\nwindow.addEventListener('DOMContentLoaded', function () {\n    // レンダラーを作成\n    var renderer = new THREE.WebGLRenderer();\n    // レンダラーのサイズを設定\n    renderer.setSize(800, 600);\n    // canvasをbodyに追加\n    document.body.appendChild(renderer.domElement);\n    // シーンを作成\n    var scene = new THREE.Scene();\n    // カメラを作成\n    var camera = new THREE.PerspectiveCamera(45, 800 / 600, 1, 10000);\n    camera.position.set(0, 0, 1000);\n    // カメラコントローラーを作成\n    var controls = new THREE.OrbitControls(camera);\n    // camera.lookAt(new THREE.Vector3(0, 0, 0));\n    // 箱を作成\n    var geometry = new THREE.BoxGeometry(250, 250, 250);\n    var material = new THREE.MeshPhongMaterial({ color: 0xff0000 });\n    var box = new THREE.Mesh(geometry, material);\n    box.position.z = -5;\n    scene.add(box);\n    // 平行光源を生成\n    var light = new THREE.DirectionalLight(0xffffff);\n    light.position.set(1, 1, 1);\n    scene.add(light);\n    var tick = function () {\n        requestAnimationFrame(tick);\n        box.rotation.x += 0.05;\n        box.rotation.y += 0.05;\n        // 描画\n        renderer.render(scene, camera);\n    };\n    tick();\n    console.log('Hello Three.js');\n});\n\n\n//# sourceURL=webpack:///./src/typescript/main.ts?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./src/typescript/hello.ts\");\n// import * as THREE from 'three';\nvar THREE = __webpack_require__(/*! three-js */ \"./node_modules/three-js/index.js\")([\n    'EffectComposer',\n    'OrbitControls'\n]);\n// import * as ts from 'test';\n/// <reference path=\"hello.ts\"/>\n\nwindow.addEventListener('DOMContentLoaded', function () {\n    var h = new _hello__WEBPACK_IMPORTED_MODULE_0__[\"Hello\"](\"Jun\");\n    h.disp();\n    // レンダラーを作成\n    var renderer = new THREE.WebGLRenderer();\n    // レンダラーのサイズを設定\n    renderer.setSize(800, 600);\n    // canvasをbodyに追加\n    document.body.appendChild(renderer.domElement);\n    // シーンを作成\n    var scene = new THREE.Scene();\n    // カメラを作成\n    var camera = new THREE.PerspectiveCamera(45, 800 / 600, 1, 10000);\n    camera.position.set(0, 0, 1000);\n    // カメラコントローラーを作成\n    var controls = new THREE.OrbitControls(camera);\n    // camera.lookAt(new THREE.Vector3(0, 0, 0));\n    // 箱を作成\n    var geometry = new THREE.BoxGeometry(250, 250, 250);\n    var material = new THREE.MeshPhongMaterial({ color: 0xff0000 });\n    var box = new THREE.Mesh(geometry, material);\n    box.position.z = -5;\n    scene.add(box);\n    // 平行光源を生成\n    var light = new THREE.DirectionalLight(0xffffff);\n    light.position.set(1, 1, 1);\n    scene.add(light);\n    var tick = function () {\n        requestAnimationFrame(tick);\n        box.rotation.x += 0.05;\n        box.rotation.y += 0.05;\n        // 描画\n        renderer.render(scene, camera);\n    };\n    tick();\n    console.log('Hello Three.js');\n});\n\n\n//# sourceURL=webpack:///./src/typescript/main.ts?");
 
 /***/ })
 

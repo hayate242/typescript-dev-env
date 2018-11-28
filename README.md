@@ -7,6 +7,7 @@ cd path/to/tsconfig.json
 npm run build
 
 #ThreeJS
+https://www.npmjs.com/package/three-js
 npm i -D webpack webpack-cli typescript ts-loader
 npm i -S three-js @types/three
 npm i -D @types/node

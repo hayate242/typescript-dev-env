@@ -3,9 +3,16 @@ const THREE = require('three-js')([
   'EffectComposer',
   'OrbitControls'
 ]);
-// var THREE = require("three-js")();
+// import * as ts from 'test';
+/// <reference path="hello.ts"/>
+import { Hello } from './hello';
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  var h = new Hello("Jun" );
+  h.disp();
+
+
   // レンダラーを作成
   const renderer = new THREE.WebGLRenderer();
   // レンダラーのサイズを設定
